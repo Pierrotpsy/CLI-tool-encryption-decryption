@@ -1,0 +1,5 @@
+This file contains sensitive information that needs to be encrypted!
+
+My name is Maxime.
+
+Here is some information about me :)

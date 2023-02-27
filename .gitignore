@@ -19,3 +19,17 @@ Symmetric/node_modules/commander/package-support.json
 Symmetric/node_modules/commander/package.json
 Symmetric/node_modules/commander/Readme.md
 Symmetric/node_modules/commander/typings/index.d.ts
+Asymmetric/node_modules/.package-lock.json
+Asymmetric/node_modules/commander/esm.mjs
+Asymmetric/node_modules/commander/index.js
+Asymmetric/node_modules/commander/lib/argument.js
+Asymmetric/node_modules/commander/lib/command.js
+Asymmetric/node_modules/commander/lib/error.js
+Asymmetric/node_modules/commander/lib/help.js
+Asymmetric/node_modules/commander/lib/option.js
+Asymmetric/node_modules/commander/lib/suggestSimilar.js
+Asymmetric/node_modules/commander/LICENSE
+Asymmetric/node_modules/commander/package-support.json
+Asymmetric/node_modules/commander/package.json
+Asymmetric/node_modules/commander/Readme.md
+Asymmetric/node_modules/commander/typings/index.d.ts
