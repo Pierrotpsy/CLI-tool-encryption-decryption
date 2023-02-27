@@ -8,9 +8,9 @@ const program = new Command();
 
 
 program
-    .name('RSA encryption/decryption')
-    .description('CLI to encrypt and decrypt some string using RSA')
-    .version('0.8.0');
+    .name('RSA encryption/decryption and key generation')
+    .description('CLI to encrypt and decrypt some files using RSA')
+    .version('1.0.0');
 
 program.command('generate')
     .description('Generate a pair of RSA keys to use in encoding and decoding data.')
@@ -38,7 +38,7 @@ program.command('generate')
     })
 
 program.command('encrypt')
-    .description('Encrypt a string using RSA and a public key.')
+    .description('Encrypt a file using RSA and a public key.')
     .option('-f, --file <string>', 'File to encrypt', '../data/data.txt')
     .option('-k, --key <string>', 'Public key file', "../data/public.pem")
     .option('-o, --output <string>', 'File to store the encrypted data', "../data/encrypted_data.txt")
@@ -52,7 +52,7 @@ program.command('encrypt')
     });
 
 program.command('decrypt')
-    .description('Decrypt a string using RSA and a private key.')
+    .description('Decrypt a file using RSA and a private key.')
     .option('-f, --file <string>', 'File to decrypt', '../data/encrypted_data.txt')
     .option('-k, --key <string>', 'Private key file', '../data/private.pem')
     .option('-o, --output <string>', 'File to store the decrypted data', "../data/decrypted_data.txt")
@@ -61,7 +61,7 @@ program.command('decrypt')
         const privateKey = fs.readFileSync(options.key, { encoding: "utf-8" });
         const decryptedData = dec.decrypt(encryptedData, privateKey);
         fs.writeFileSync(options.output, decryptedData, {encoding: "utf-8"});
-        console.log("Decrypted string saved to file " + options.output)
+        console.log("Decrypted string saved to file " + options.output);
         console.log("Decryption successful");
     });
 
